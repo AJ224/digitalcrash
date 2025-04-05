@@ -84,11 +84,11 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Visit Us</h3>
               <p className="text-muted-foreground">
-                123 Crash Street
-                <br />
+                Pune
+                {/* <br />
                 New York, NY 10001
                 <br />
-                United States
+                United States */}
               </p>
             </motion.div>
 
@@ -104,9 +104,9 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Call Us</h3>
               <p className="text-muted-foreground">
-                +1 (555) 123-4567
-                <br />
-                +1 (555) 987-6543
+              +91 90210 18080
+                {/* <br />
+                +1 (555) 987-6543 */}
               </p>
             </motion.div>
 
@@ -122,9 +122,9 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Email Us</h3>
               <p className="text-muted-foreground">
-                hello@sigmacreative.com
-                <br />
-                support@sigmacreative.com
+              digitalCrashWorks@gmail.com
+                {/* <br />
+                support@sigmacreative.com */}
               </p>
             </motion.div>
 
