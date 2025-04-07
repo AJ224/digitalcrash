@@ -1,13 +1,13 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import Spline from '@splinetool/react-spline'
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen max-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full filter blur-3xl opacity-50 animate-float" />
@@ -20,7 +20,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <div className="z-20"> {/* Increased z-index to ensure text is on top */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading leading-tight mb-6">
               Bringing Your <span className="text-primary">Digital Vision</span> To Life
             </h1>
@@ -39,49 +39,30 @@ const HeroSection = () => {
                 <Link href="/portfolio">View Our Work</Link>
               </Button>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative z-10 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-sm p-1 rounded-2xl border border-border/50 shadow-xl">
-              <div className="aspect-video rounded-xl overflow-hidden border border-border/50">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                  <source src="https://static.vecteezy.com/system/resources/previews/024/186/673/mp4/coding-programming-web-development-modern-design-concept-free-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
+          </div>
+          <div className="relative flex items-center justify-right">
+            {/* 3D model container with proper positioning */}
+            {/* <div className="relative w-full h-full"> */}
+              <Spline 
+                scene="https://prod.spline.design/P6tALDsk7oCbimm6/scene.splinecode" 
+                width={300}
+                height={300}
+                className="max-w-full"
+              />
+            {/* </div> */}
 
             {/* Floating Elements */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-8 -left-8 bg-secondary/80 backdrop-blur-sm p-4 rounded-lg border border-border shadow-lg animate-float"
-            >
+            <div className="absolute -bottom-8 -left-8 bg-secondary/80 backdrop-blur-sm p-4 rounded-lg border border-border shadow-lg animate-float">
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
                   <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <div>
-                  <p className="text-sm font-medium">Fast Delivery</p>
-                  <p className="text-xs text-muted-foreground">2x faster than competitors</p>
-                </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: -40 }}
-              animate={{ opacity: 1, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -top-8 -right-8 bg-secondary/80 backdrop-blur-sm p-4 rounded-lg border border-border shadow-lg animate-float-delay-1"
-            >
+            <div className="absolute -top-8 -right-8 bg-secondary/80 backdrop-blur-sm p-4 rounded-lg border border-border shadow-lg animate-float-delay-1">
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
                   <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,13 +74,9 @@ const HeroSection = () => {
                     />
                   </svg>
                 </div>
-                <div>
-                  <p className="text-sm font-medium">Affordable Pricing</p>
-                  <p className="text-xs text-muted-foreground">Premium quality, budget friendly</p>
-                </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -107,4 +84,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-
