@@ -450,7 +450,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Pricing Packages */}
-            <div ref={addToRefs} className="reveal-on-scroll mt-20">
+            {/* <div ref={addToRefs} className="reveal-on-scroll mt-20">
               <h3 className="text-2xl font-bold mb-8 text-center">Pricing Packages</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {service.packages.map((pkg, i) => (
@@ -474,7 +474,7 @@ export default function ServicesPage() {
                   </Card>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       ))}

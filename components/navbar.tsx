@@ -58,7 +58,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button size="sm">Get Started</Button>
+            {/* <Button size="sm">Get Started</Button> */}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -93,9 +93,9 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+              {/* <Button className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
                 Get Started
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         )}

@@ -117,7 +117,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 md:px-6 lg:px-8">
+      {/* <section className="py-20 px-4 md:px-6 lg:px-8">
         <div className="container mx-auto">
           <div ref={addToRefs} className="reveal-on-scroll text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading mb-4">
@@ -207,7 +207,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Process */}
       <section className="py-20 px-4 md:px-6 lg:px-8 bg-secondary/30">

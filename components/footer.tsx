@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
+{/* 
           <div>
             <h3 className="text-lg font-bold mb-6">Newsletter</h3>
             <p className="text-muted-foreground mb-4">
@@ -118,7 +118,7 @@ const Footer = () => {
               <Input type="email" placeholder="Your email address" className="bg-background/50" />
               <Button className="w-full">Subscribe</Button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">

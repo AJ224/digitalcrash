@@ -128,7 +128,7 @@ export default function ContactPage() {
               </p>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -146,7 +146,7 @@ export default function ContactPage() {
                 <br />
                 Sunday: Closed
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>
@@ -246,7 +246,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 px-4 md:px-6 lg:px-8 bg-secondary/30">
+      {/* <section className="py-20 px-4 md:px-6 lg:px-8 bg-secondary/30">
         <div className="container mx-auto">
           <div ref={addToRefs} className="reveal-on-scroll text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading mb-4">
@@ -270,7 +270,7 @@ export default function ContactPage() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-20 px-4 md:px-6 lg:px-8">
