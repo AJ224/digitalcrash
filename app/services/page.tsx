@@ -47,7 +47,7 @@ export default function ServicesPage() {
       title: "Web Development",
       description: "Custom websites and web applications built with the latest technologies.",
       icon: <Code className="h-10 w-10 text-primary" />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/webdev.webp?height=600&width=800",
       features: [
         "Responsive website design",
         "E-commerce solutions",
@@ -102,7 +102,7 @@ export default function ServicesPage() {
       title: "Graphic Design",
       description: "Eye-catching visuals that communicate your brand's message effectively.",
       icon: <Palette className="h-10 w-10 text-primary" />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/graphic.jpg?height=600&width=800",
       features: [
         "Logo design",
         "Brand identity",
@@ -153,7 +153,7 @@ export default function ServicesPage() {
       title: "Branding",
       description: "Comprehensive brand identity development to establish a strong market presence.",
       icon: <Layers className="h-10 w-10 text-primary" />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/branding.jpg?height=600&width=800",
       features: [
         "Brand strategy",
         "Visual identity",

@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import CursorGlow from "@/components/cursor-glow"
+import ParticleBackground from "@/components/particle-background"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,9 +21,11 @@ const fontHeading = FontHeading({
 })
 
 export const metadata: Metadata = {
-  title: "Digital Crash | Full-Service Crash & Development Agency",
+  title: "Digital Crash",
   description: "Affordable, fast, and high-quality digital solutions for non-tech industries.",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/FaviconDigitalCrash.png", // this is the magic line
+  },
 }
 
 export default function RootLayout({
@@ -34,6 +38,8 @@ export default function RootLayout({
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable, fontHeading.variable)}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <div className="relative flex min-h-screen flex-col">
+          <CursorGlow />
+          <ParticleBackground particleCount={30} />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />

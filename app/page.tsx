@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -11,8 +11,10 @@ import HeroSection from "@/components/hero-section"
 import ServiceCard from "@/components/service-card"
 import TestimonialSlider from "@/components/testimonial-slider"
 import ContactForm from "@/components/contact-form"
+import IntroAnimation from "@/components/intro-animation"
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(true);
   const revealRefs = useRef<HTMLElement[]>([])
 
   useEffect(() => {
@@ -44,6 +46,7 @@ export default function Home() {
     }
   }
 
+
   const services = [
     {
       title: "Web Development",
@@ -71,7 +74,15 @@ export default function Home() {
     },
   ]
 
+    // Handle the completion of intro animation
+    const handleIntroComplete = () => {
+      setShowIntro(false);
+    };
+
   return (
+    <>
+      {showIntro && <IntroAnimation onComplete={handleIntroComplete} />}
+
     <div className="overflow-hidden">
       <HeroSection />
 
@@ -189,13 +200,13 @@ export default function Home() {
             <Card className="hover-reveal overflow-hidden border-0 bg-transparent">
               <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=400"
+                  src="/real-estate.png?height=600&width=400"
                   alt="Construction industry"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="hover-reveal-content">
-                  <h3 className="text-xl font-bold mb-2">Construction</h3>
+                  <h3 className="text-xl font-bold mb-2">Real-Estate</h3>
                   <p className="text-sm text-muted-foreground">
                     Digital solutions for construction companies to showcase projects and services.
                   </p>
@@ -206,13 +217,13 @@ export default function Home() {
             <Card className="hover-reveal overflow-hidden border-0 bg-transparent">
               <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=400"
-                  alt="Healthcare industry"
+                  src="/web3.png?height=600&width=400"
+                  alt="Web3 industry"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="hover-reveal-content">
-                  <h3 className="text-xl font-bold mb-2">Healthcare</h3>
+                  <h3 className="text-xl font-bold mb-2">Web3</h3>
                   <p className="text-sm text-muted-foreground">
                     Patient-focused websites and applications for healthcare providers.
                   </p>
@@ -223,13 +234,13 @@ export default function Home() {
             <Card className="hover-reveal overflow-hidden border-0 bg-transparent">
               <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=400"
-                  alt="Education industry"
+                  src="/tech.png?height=600&width=400"
+                  alt="Tech industry"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="hover-reveal-content">
-                  <h3 className="text-xl font-bold mb-2">Education</h3>
+                  <h3 className="text-xl font-bold mb-2">Tech Industry</h3>
                   <p className="text-sm text-muted-foreground">
                     Engaging digital platforms for educational institutions and e-learning.
                   </p>
@@ -263,7 +274,7 @@ export default function Home() {
 
           <TestimonialSlider />
 
-          <div className="mt-16">
+          {/* <div className="mt-16">
             <div ref={addToRefs} className="reveal-on-scroll text-center mb-8">
               <h3 className="text-2xl font-bold mb-6">Trusted By</h3>
             </div>
@@ -283,7 +294,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -325,7 +336,8 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium">+1 (555) 123-4567</p>
+                    <p className="font-medium">              +91 90210 18080
+                    </p>
                   </div>
                 </div>
 
@@ -342,7 +354,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">hello@sigmacreative.com</p>
+                    <p className="font-medium">digitalCrashWorks@gmail.com</p>
                   </div>
                 </div>
 
@@ -365,7 +377,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">New York, NY</p>
+                    <p className="font-medium">Pune</p>
                   </div>
                 </div>
               </div>
@@ -383,7 +395,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }
-

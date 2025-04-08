@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from 'next/image';
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
@@ -41,11 +42,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-heading font-bold text-primary">
-              DIGITAL<span className="text-foreground">CRASH</span>
-            </span>
-          </Link>
+        <Link href="/" className="flex items-center">
+        <Image
+          src="/navbarlogo.png"
+          alt="Digital Crash Logo"
+          width={120} // adjust size as needed
+          height={40}
+        />
+      </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
