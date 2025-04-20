@@ -321,7 +321,7 @@ export default function Home() {
               <p className="text-muted-foreground mb-6">
                 Fill out the form and our team will get back to you within 24 hours to discuss your project needs.
               </p>
-
+{/* 
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-4">
@@ -339,7 +339,7 @@ export default function Home() {
                     <p className="font-medium">              +91 90210 18080
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-4">
@@ -357,7 +357,7 @@ export default function Home() {
                     <p className="font-medium">digitalCrashWorks@gmail.com</p>
                   </div>
                 </div>
-
+{/* 
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-4">
                     <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -380,7 +380,7 @@ export default function Home() {
                     <p className="font-medium">Pune</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
 
             <motion.div

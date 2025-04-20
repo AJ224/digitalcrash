@@ -72,7 +72,7 @@ export default function ContactPage() {
       <section className="py-20 px-4 md:px-6 lg:px-8 bg-secondary/30">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -85,14 +85,11 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold mb-2">Visit Us</h3>
               <p className="text-muted-foreground">
                 Pune
-                {/* <br />
-                New York, NY 10001
-                <br />
-                United States */}
-              </p>
-            </motion.div>
 
-            <motion.div
+              </p>
+            </motion.div> */}
+
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -105,10 +102,8 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold mb-2">Call Us</h3>
               <p className="text-muted-foreground">
               +91 90210 18080
-                {/* <br />
-                +1 (555) 987-6543 */}
               </p>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
