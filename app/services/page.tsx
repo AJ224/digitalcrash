@@ -47,7 +47,7 @@ export default function ServicesPage() {
       title: "Web Development",
       description: "Custom websites and web applications built with the latest technologies.",
       icon: <Code className="h-10 w-10 text-primary" />,
-      image: "/webdev.webp?height=600&width=800",
+      image: "/webdev.jpg?height=600&width=800",
       features: [
         "Responsive website design",
         "E-commerce solutions",
@@ -153,7 +153,7 @@ export default function ServicesPage() {
       title: "Branding",
       description: "Comprehensive brand identity development to establish a strong market presence.",
       icon: <Layers className="h-10 w-10 text-primary" />,
-      image: "/branding.jpg?height=600&width=800",
+      image: "/branding.jpeg?height=600&width=800",
       features: [
         "Brand strategy",
         "Visual identity",
@@ -208,7 +208,7 @@ export default function ServicesPage() {
       title: "Video & Animation",
       description: "Engaging motion graphics and video content that captivates your audience.",
       icon: <Video className="h-10 w-10 text-primary" />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/videoanimation.jpg?height=600&width=800",
       features: [
         "Explainer videos",
         "Motion graphics",
@@ -260,7 +260,7 @@ export default function ServicesPage() {
       title: "CGI",
       description: "Photorealistic 3D visualizations and animations for products and environments.",
       icon: <PenTool className="h-10 w-10 text-primary" />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/cgi.png?height=600&width=800",
       features: [
         "3D product visualization",
         "Architectural visualization",
